@@ -1,0 +1,42 @@
+
+.gallery {
+  width: 800px;
+  margin: 0 auto;
+  padding: 5px;
+}
+
+.gallery > div {
+  position: relative;
+  float: left;
+  padding: 5px;
+}
+
+.gallery > div > img {
+  display: block;
+  width: 250px;
+  -webkit-transition: .1s transform;
+  transition: .1s transform;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0); /* hack */
+}
+
+.gallery > div:hover {
+  z-index: 1;
+}
+
+.gallery > div:hover > img {
+  -webkit-transform: scale(1.7,1.7);
+          transform: scale(1.7,1.7);
+  -webkit-transition: .3s transform;
+  transition: .3s transform;
+}
+
+.cf:before, .cf:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+
+.cf:after {
+  clear: both;
+}
